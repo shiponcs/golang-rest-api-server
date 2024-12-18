@@ -21,6 +21,7 @@ func ServeEndpoints(port string) {
 	router.Post("/authorize", endpointshandler.Login)
 	router.Get("/users", endpointshandler.GetUsers)
 	router.Get("/user/{id}", endpointshandler.GetUserWithId)
+	router.Delete("/user/{id}", endpointshandler.DeleteUser)
 
 	server := &http.Server{
 		Addr:    ":" + port,
