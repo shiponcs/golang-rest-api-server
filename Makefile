@@ -12,4 +12,8 @@ build: $(BIN_DIR)
 clean:
 	rm -rf $(BIN_DIR)
 
-.PHONY: all build clean
+docker-build: build
+	docker build -t book-store-api-server .
+
+
+.PHONY: all build clean docker-build
