@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-store-api-deployment
+  labels:
+    app: book-store-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: book-store-api
+  template:
+    metadata:
+      labels:
+        app: book-store-api
+    spec:
+      containers:
+        - name: book-store-api-container
+          image: shiponcs/book-store-api-server:v0.1.0
+          args: ["--port", "9090"]
+          ports:
+            - containerPort: 9090
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-store-api-service
+spec:
+  selector:
+    app: book-store-api
+  ports:
+    - port: 80
+      targetPort: 9090

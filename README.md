@@ -94,3 +94,8 @@ serving at port 8080
 serving at port 8080
 ```
 
+### Run in Kubernetes
+```bash
+  > kubectl create ns book-server
+  > kubectl apply -f k8s/manifests/deployment.yaml -n book-server
+```
