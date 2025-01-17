@@ -1,5 +1,6 @@
 BIN_DIR := bin
 PROJECT_NAME := book-store-api-server
+TAG ?= latest
 
 all: build
 
@@ -13,7 +14,7 @@ clean:
 	rm -rf $(BIN_DIR)
 
 docker-build: build
-	docker build -t book-store-api-server .
+	docker build -t $(PROJECT_NAME):$(TAG) .
 
 
 .PHONY: all build clean docker-build

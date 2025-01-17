@@ -77,7 +77,7 @@ Default port is 8080 and other default values can be found at .env file.
 #### Pass Command Line Arg values
 ##### Modify the listening port
 ```bash
-> docker run -p 8081:8081 book-store-api-server ./book-store-api-server serve --port 8081
+> docker run -p 8081:8081 book-store-api-server --port 8081
 serving at port 8081
 
 ``` 

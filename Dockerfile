@@ -18,5 +18,5 @@ COPY --from=builder /app/bin/book-store-api-server /app/book-store-api-server
 
 EXPOSE 8080
 
-CMD ["/app/book-store-api-server", "serve", "--port", "8080"]
-#CMD ["./book-store-api-server"]
+ENTRYPOINT ["/app/book-store-api-server", "serve"]
+CMD ["--port", "8080"]
