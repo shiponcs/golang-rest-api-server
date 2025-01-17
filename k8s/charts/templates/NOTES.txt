@@ -1,0 +1,8 @@
+**************************************************************************
+*** PLEASE BE PATIENT: Book Server will be installed momentarily ***
+**************************************************************************
+
+A REST API Server written in Golang serves a Book Store
+
+Thank you for installing! 🎉
+
